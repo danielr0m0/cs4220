@@ -18,5 +18,10 @@ const flags = yargs.usage('$0: Usage <cmd> [options]')
         },
         handler: (argv) => { app.draw(argv.shuffle, argv.number) }
     })
+    .command({
+        command: 'play',
+        desc: 'start a game of five hand poker',
+        handler: (argv) => { app.play() }
+    })
     .help('help')
     .argv
