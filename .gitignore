@@ -1,4 +1,4 @@
 node_modules/
-pacjage-lock.json
+/pacjage-lock.json
 test.js
 examples/
