@@ -1,0 +1,30 @@
+{
+  "name": "cs4220",
+  "version": "1.0.0",
+  "description": "class work",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "deck": "^1.0.0",
+    "live-server": "^1.2.0",
+    "request": "^2.83.0",
+    "superagent": "^3.8.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielr0m0/cs4220.git"
+  },
+  "author": "daniel romo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielr0m0/cs4220/issues"
+  },
+  "homepage": "https://github.com/danielr0m0/cs4220#readme"
+}
