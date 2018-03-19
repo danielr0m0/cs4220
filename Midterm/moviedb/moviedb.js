@@ -10,23 +10,31 @@ const
         .catch(error => error.response.body)
     }
 //i dont know it works yet havent tested it out
-exports.getTvSearch = (query) => {
+exports.tvSearch = (query) => {
     if(query != null){
         return _fetch(`/search/tv?api_key=${config.apiKey}&query=${query}`)
     }else
         return -1
 }
 
-exports.getMovieSearch = (query) => {
+exports.movieSearch = (query) => {
     if(query != null){
         return _fetch(`/search/movie?api_key=${config.apiKey}&query=${query}`)
     }else
         return -1
 }
 
-exports.getPeopleSearch = (query) => {
+exports.personSearch = (query) => {
     if(query != null){
         return _fetch(`/search/person?api_key=${config.apiKey}&query=${query}`)
+    }else
+        return -1
+}
+
+//this will be default search
+exports.multiSearch = (query) =>{
+    if(query != null){
+        return _fetch(`/search/multi?api_key=${config.apiKey}&query=${query}`)
     }else
         return -1
 }
