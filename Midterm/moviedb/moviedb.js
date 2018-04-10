@@ -9,24 +9,23 @@ const
         .then(response => response.body)
         .catch(error => error.response.body)
     }
-//i dont know it works yet havent tested it out
 exports.tvSearch = (query) => {
     if(query != null){
-        return _fetch(`/search/tv?api_key=${config.apiKey}&query=${query}`)
+        return _fetch(`search/tv?api_key=${config.apiKey}&query=${query}`)
     }else
         return -1
 }
 
 exports.movieSearch = (query) => {
     if(query != null){
-        return _fetch(`/search/movie?api_key=${config.apiKey}&query=${query}`)
+        return _fetch(`search/movie?api_key=${config.apiKey}&query=${query}`)
     }else
         return -1
 }
 
 exports.personSearch = (query) => {
     if(query != null){
-        return _fetch(`/search/person?api_key=${config.apiKey}&query=${query}`)
+        return _fetch(`search/person?api_key=${config.apiKey}&query=${query}`)
     }else
         return -1
 }
@@ -34,8 +33,12 @@ exports.personSearch = (query) => {
 //this will be default search
 exports.multiSearch = (query) =>{
     if(query != null){
-        return _fetch(`/search/multi?api_key=${config.apiKey}&query=${query}`)
+        return _fetch(`search/multi?api_key=${config.apiKey}&query=${query}`)
     }else
         return -1
+}
+
+exports.getItem = (from, id) =>{
+    return _fetch(`${from}/${id}?api_key=${config.apiKey}`)
 }
 

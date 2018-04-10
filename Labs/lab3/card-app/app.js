@@ -75,9 +75,6 @@ const play = () => {
 }
 
 module.exports = {
+    play,
     draw
-}
-
-module.exports = {
-    play
 }
